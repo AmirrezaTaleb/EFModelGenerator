@@ -113,7 +113,7 @@ WHERE o.name = 'product'
         );
 DECLARE @propsDataTypeConfig NVARCHAR(MAX) =
         (
-            SELECT 'entity.Property(e => e.'+COLUMN_NAME+').HasColumnName("'+DATA_TYPE
+            SELECT 'entity.Property(e => e.'+COLUMN_NAME+').HasColumnType("'+DATA_TYPE
 						+
 						CASE 
 						WHEN CHARACTER_MAXIMUM_LENGTH IS NOT NULL AND CHARACTER_MAXIMUM_LENGTH<> -1  THEN '('+CAST(CHARACTER_MAXIMUM_LENGTH AS NVARCHAR(MAX))+')'
